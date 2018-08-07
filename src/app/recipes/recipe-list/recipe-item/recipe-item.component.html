@@ -1,13 +1,19 @@
 <!-- Each Recipe Item -->
 
 
-<a href="#" class="list-group-item clearfix" style="margin-bottom:30px;" (click)="selectedRecipe()">
-    <div class="pull-left">
-        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
-        <p class="list-group-item-text">{{recipe.description}}</p>
+<a [routerLink]="['/recipes',id]" class="list-group-item clearfix" routerLinkActive="active" style="margin-bottom:30px; cursor: pointer;">
+    <div class="row">
+       <div class="col-md-6">
+        <div class="pull-left">
+            <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+            <p class="list-group-item-text">{{recipe.description}}</p>
+        </div>
+       </div>
+       <div class="col-md-6">
+        <span class="pull-right">
+            <img [src]="recipe.imagePath" alt="{{recipe.name}}" srcset="" class="
+          img-responsive" width="200" height="250">
+        </span>
+       </div>
     </div>
-    <span class="pull-right">
-        <img [src]="recipe.imagePath" alt="{{recipe.name}}" srcset="" class="
-      img-responsive" style="max-height: 180px; max-width: 180px">
-    </span>
 </a>
