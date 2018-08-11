@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { } from "events";
 import { RecipeService } from "../recipes/recipe.service";
-import { Response } from "../../../node_modules/@angular/http";
+import { Response } from "@angular/http";
 import { AuthService } from "../auth/auth.service";
 
 @Component({

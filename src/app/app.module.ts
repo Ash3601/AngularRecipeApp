@@ -17,11 +17,15 @@ import { AppRoutingModule } from "./app-routing.module";
 import { RecipesStartComponent } from './recipes/recipes-start/recipes-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from "./recipes/recipe.service";
-import { HttpModule } from "../../node_modules/@angular/http";
+import { HttpModule } from "@angular/http";
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from "./auth/auth.service";
 import { AuthGuard } from "./auth/auth-guard.service";
+import { RecipesModule } from "./recipes/recipes.module";
+import { SharedModule } from "./shared/shared.module";
+import { AuthModule } from "./auth/auth.module";
+import { ShoppingListModule } from "./shopping-list/shopping-list.module";
 // const appRoutes: Routes = [
 //   {path: '', component: AppComponent}
 //   { path: "shopping-list", component: ShoppingListComponent },
@@ -32,26 +36,33 @@ import { AuthGuard } from "./auth/auth-guard.service";
 @NgModule({
   declarations: [
     AppComponent,
-    ShoppingListComponent,
-    RecipeListComponent,
+    // ShoppingListComponent,
+    // RecipeListComponent,
     HeaderComponent,
-    RecipesComponent,
-    RecipeDetailComponent,
-    RecipeItemComponent,
-    ShoppingEditComponent,
-    DropdownDirective,
-    RecipesStartComponent,
-    RecipeEditComponent,
-    SignupComponent,
-    SigninComponent,
+    // RecipesComponent,
+    // // RecipeDetailComponent,
+    // RecipeItemComponent,
+    // ShoppingEditComponent,
+    // DropdownDirective,
+    // RecipesStartComponent,
+    // RecipeEditComponent,
+    // SignupComponent,
+    // SigninComponent,
+    
   ],
     
-    imports: [BrowserModule, 
-      FormsModule, 
-      // RouterModule.forRoot(appRoutes)
+    imports: [
+      BrowserModule, 
+      // FormsModule, 
+      HttpModule,
+      RecipesModule,
       AppRoutingModule,
-      ReactiveFormsModule,
-      HttpModule
+      SharedModule,
+      ShoppingListModule,
+      AuthModule
+      // RouterModule.forRoot(appRoutes)
+      // ReactiveFormsModule,
+
     ],
   providers: [ShoppingListService, RecipeService, AuthService, AuthGuard],
   bootstrap: [AppComponent]

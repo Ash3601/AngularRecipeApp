@@ -1,4 +1,4 @@
-import { Subject } from "../../../node_modules/rxjs";
+import { Subject } from "rxjs";
 import { Ingredient } from "../shared/ingredient.model";
 
 export class ShoppingListService {

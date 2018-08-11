@@ -11,8 +11,8 @@ import {
 import { Ingredient } from "../../shared/ingredient.model";
 import {} from "@angular/core/src/debug/debug_node";
 import { ShoppingListService } from "../shopping-list.service";
-import { NgForm } from "../../../../node_modules/@angular/forms";
-import { Subscription } from "../../../../node_modules/rxjs";
+import { NgForm } from "@angular/forms";
+import { Subscription } from "rxjs";
 @Component({
   selector: "app-shopping-edit",
   templateUrl: "./shopping-edit.component.html",

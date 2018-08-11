@@ -6,7 +6,7 @@ import {
   ActivatedRoute,
   Params,
   Router
-} from "../../../../node_modules/@angular/router";
+} from "@angular/router";
 import { AuthService } from "../../auth/auth.service";
 
 @Component({
