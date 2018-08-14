@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 import { RecipeListComponent } from "./recipes/recipe-list/recipe-list.component";
-import { HeaderComponent } from "./header/header.component";
+// import { HeaderComponent } from "./header/header.component";
 import { RecipesComponent } from "./recipes/recipes.component";
 import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.component";
 import { RecipeItemComponent } from "./recipes/recipe-list/recipe-item/recipe-item.component";
@@ -26,6 +26,8 @@ import { RecipesModule } from "./recipes/recipes.module";
 import { SharedModule } from "./shared/shared.module";
 import { AuthModule } from "./auth/auth.module";
 import { ShoppingListModule } from "./shopping-list/shopping-list.module";
+// import { HomeComponent } from './home/home.component';
+import { CoreModule } from "./core/core.module";
 // const appRoutes: Routes = [
 //   {path: '', component: AppComponent}
 //   { path: "shopping-list", component: ShoppingListComponent },
@@ -38,7 +40,8 @@ import { ShoppingListModule } from "./shopping-list/shopping-list.module";
     AppComponent,
     // ShoppingListComponent,
     // RecipeListComponent,
-    HeaderComponent,
+    // HeaderComponent,
+    // HomeComponent,
     // RecipesComponent,
     // // RecipeDetailComponent,
     // RecipeItemComponent,
@@ -55,16 +58,17 @@ import { ShoppingListModule } from "./shopping-list/shopping-list.module";
       BrowserModule, 
       // FormsModule, 
       HttpModule,
-      RecipesModule,
+      // RecipesModule,
       AppRoutingModule,
       SharedModule,
       ShoppingListModule,
-      AuthModule
+      AuthModule,
+      CoreModule
       // RouterModule.forRoot(appRoutes)
       // ReactiveFormsModule,
 
     ],
-  providers: [ShoppingListService, RecipeService, AuthService, AuthGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,5 +1,5 @@
-import { NgModule } from "../../../node_modules/@angular/core";
-import { Routes, RouterModule } from "../../../node_modules/@angular/router";
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 import { RecipesComponent } from "./recipes.component";
 import { RecipeEditComponent } from "./recipe-edit/recipe-edit.component";
 import { AuthGuard } from "../auth/auth-guard.service";
@@ -8,11 +8,11 @@ import { RecipeDetailComponent } from "./recipe-detail/recipe-detail.component";
 
 const recipeRoutes: Routes = [
   {
-    path: "recipes",
+    path: '',
     component: RecipesComponent,
     children: [
-      { path: "new", component: RecipeEditComponent, canActivate: [AuthGuard] },
       { path: "", component: RecipesStartComponent },
+      { path: "new", component: RecipeEditComponent, canActivate: [AuthGuard] },
       { path: ":id", component: RecipeDetailComponent },
       {
         path: ":id/edit",

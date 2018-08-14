@@ -1,6 +1,6 @@
-import { NgModule } from "../../../node_modules/@angular/core";
-import { ReactiveFormsModule } from "../../../node_modules/@angular/forms";
-import { CommonModule } from "../../../node_modules/@angular/common";
+import { NgModule } from "@angular/core";
+import { ReactiveFormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
 import { RecipesComponent } from "./recipes.component";
 import { RecipesStartComponent } from "./recipes-start/recipes-start.component";
 import { RecipeEditComponent } from "./recipe-edit/recipe-edit.component";
@@ -30,7 +30,7 @@ import { SharedModule } from "../shared/shared.module";
         SharedModule 
     ],
     // bootstrap:
-}) 
+})  
 export class RecipesModule {
 
 }

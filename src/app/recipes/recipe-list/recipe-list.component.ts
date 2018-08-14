@@ -53,7 +53,9 @@ export class RecipeListComponent implements OnInit, OnDestroy {
     this.recipes = this.recipeService.getRecipe();
   }
 
-  
+  isAuthenticated () {
+    return this.authService.isAuthenticated();
+  }
 
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.

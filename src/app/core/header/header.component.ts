@@ -1,8 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { } from "events";
-import { RecipeService } from "../recipes/recipe.service";
+// import { RecipeService } from "../recipes/recipe.service";
 import { Response } from "@angular/http";
-import { AuthService } from "../auth/auth.service";
+// import { AuthService } from "../auth/auth.service";
+import { RecipeService } from "../../recipes/recipe.service";
+import { AuthService } from "../../auth/auth.service";
 
 @Component({
     selector: 'app-header',
@@ -38,5 +40,8 @@ export class HeaderComponent implements OnInit {
         this.recipeService.fetchData();
         
     }
+    isAuthenticated() {
+        return this.authService.isAuthenticated();
+      }
 
 }

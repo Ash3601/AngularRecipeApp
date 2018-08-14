@@ -16,7 +16,7 @@
             <ul class="dropdown-menu" id="manageBtn" >
               <li><a [routerLink]="['/shopping-list']" (click)="onAddToSL()" >To Shopping List</a></li>
               <li><a [routerLink]="['edit']">Edit Recipe</a></li>
-              <li *ngIf="authService.isAuthenticated()" ><a (click)="onDeleteRecipe()" >Delete Recipe</a></li>
+              <li *ngIf="isAuthenticated()" ><a (click)="onDeleteRecipe()" >Delete Recipe</a></li>
             </ul>
           </div>
       </div>
